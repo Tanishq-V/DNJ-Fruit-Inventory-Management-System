@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E71627EF-05A5-4129-9A1A-1FFC59B25CE5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DNJ_Inventory_System</RootNamespace>
+    <AssemblyName>DNJ Inventory System</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="customer_order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customer_order.Designer.cs">
+      <DependentUpon>customer_order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customer_order_details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customer_order_details.Designer.cs">
+      <DependentUpon>customer_order_details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customer_personal_details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customer_personal_details.Designer.cs">
+      <DependentUpon>customer_personal_details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dnjsystemDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dnjsystemDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login_details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login_details.Designer.cs">
+      <DependentUpon>login_details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="obj\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="personal_details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="personal_details.Designer.cs">
+      <DependentUpon>personal_details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="product_details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="product_details.Designer.cs">
+      <DependentUpon>product_details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="supplier_order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="supplier_order.Designer.cs">
+      <DependentUpon>supplier_order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="supplier_order_details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="supplier_order_details.Designer.cs">
+      <DependentUpon>supplier_order_details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="supplier_payment_details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="supplier_payment_details.Designer.cs">
+      <DependentUpon>supplier_payment_details.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="customer_order.resx">
+      <DependentUpon>customer_order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customer_order_details.resx">
+      <DependentUpon>customer_order_details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customer_personal_details.resx">
+      <DependentUpon>customer_personal_details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login_details.resx">
+      <DependentUpon>login_details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\DNJ_Inventory_System.customer_order_details.resources" />
+    <EmbeddedResource Include="obj\Debug\DNJ_Inventory_System.customer_personal_details.resources" />
+    <EmbeddedResource Include="obj\Debug\DNJ_Inventory_System.Dashboard.resources" />
+    <EmbeddedResource Include="obj\Debug\DNJ_Inventory_System.LoginForm.resources" />
+    <EmbeddedResource Include="obj\Debug\DNJ_Inventory_System.login_details.resources" />
+    <EmbeddedResource Include="obj\Debug\DNJ_Inventory_System.personal_details.resources" />
+    <EmbeddedResource Include="obj\Debug\DNJ_Inventory_System.Properties.Resources.resources" />
+    <EmbeddedResource Include="obj\Debug\DNJ_Inventory_System.supplier_order.resources" />
+    <EmbeddedResource Include="obj\Debug\DNJ_Inventory_System.supplier_order_details.resources" />
+    <EmbeddedResource Include="obj\Debug\DNJ_Inventory_System.supplier_payment_details.resources" />
+    <EmbeddedResource Include="personal_details.resx">
+      <DependentUpon>personal_details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="product_details.resx">
+      <DependentUpon>product_details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="supplier_order.resx">
+      <DependentUpon>supplier_order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="supplier_order_details.resx">
+      <DependentUpon>supplier_order_details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="supplier_payment_details.resx">
+      <DependentUpon>supplier_payment_details.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
+    <None Include="dnjsystemDataSet.xsc">
+      <DependentUpon>dnjsystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dnjsystemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dnjsystemDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dnjsystemDataSet.xss">
+      <DependentUpon>dnjsystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\DNJ Inventory System.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\DNJ Inventory System.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\DNJ Inventory System.csproj.GenerateResource.cache" />
+    <None Include="obj\Release\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Release\DNJ Inventory System.csproj.AssemblyReference.cache" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fruit bg.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\username1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_icon-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\supplier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\supplier-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lgout-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lgout-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lgout-removebg-preview %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s_per_dtl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ord_dtl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ord_dtl-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frt dashboard.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frt dashboard1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fr1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fr2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cus_png-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pay_png-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sup_pay_png-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cus_pay_png-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boxes_6690949-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sa.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="obj\Debug\DNJ Inventory System.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\TempPE\customer_order_details_model.Context.cs.dll" />
+    <Content Include="obj\Debug\TempPE\customer_order_details_model.cs.dll" />
+    <Content Include="obj\Debug\TempPE\customer_order_details_model.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\dnjsystemDataSet.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\dnjsystemDataSet1.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
